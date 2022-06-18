@@ -27,6 +27,9 @@ public:
 	// Properties
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	int Weight;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	int UsedSlots;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)

@@ -27,9 +27,6 @@ struct INVENTORYSYSTEM_API FItemInfo
 {
 	GENERATED_BODY()
 
-	/**
-	An ID is a Unique Integer bound to an Item
-	*/
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int ID;
 
@@ -44,6 +41,9 @@ struct INVENTORYSYSTEM_API FItemInfo
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	TypeEnum Type;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	int Weight;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bIsUsable;
