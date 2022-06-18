@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "UObject/NoExportTypes.h"
+#include "Engine/StaticMesh.h"
 #include "ItemInfo.h"
 #include "BaseItem.generated.h"
 
@@ -20,4 +21,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int Quantity;
+
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	TArray<UStaticMesh*> StaticMeshes;
 };
