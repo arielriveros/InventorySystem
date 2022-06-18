@@ -17,13 +17,14 @@ void UInventoryComponent::BeginPlay()
 	Super::BeginPlay();
 }
 
-bool UInventoryComponent::AddItem(FItemInfo newItem)
+bool UInventoryComponent::AddItem(UBaseItem* newItem)
 {
 	if (!HasSpace()) return false;
+	if (!newItem) return false;
 
 	Items.Add(newItem);
 	UsedSlots++;
-	Weight += newItem.Weight;
+	Weight += newItem->Info.Weight;
 	return true;
 }
 

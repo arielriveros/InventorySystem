@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "ItemInfo.h"
+#include "BaseItem.h"
 #include "InventoryComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -21,8 +21,6 @@ protected:
 	virtual void BeginPlay() override;
 
 public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 	// Properties
 
@@ -36,12 +34,12 @@ public:
 	int InventorySlots;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FItemInfo> Items;
+	TArray<UBaseItem*> Items;
 		
 	// Functions
 
 	UFUNCTION(BlueprintCallable)
-	bool AddItem(FItemInfo newItem);
+	bool AddItem(UBaseItem* newItem);
 
 	UFUNCTION(BlueprintCallable)
 	bool HasSpace();
