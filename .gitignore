@@ -1,5 +1,4 @@
 Binaries
-Content
 Config
 DerivedDataCache
 enc_temp_folder
@@ -15,7 +14,6 @@ Saved
 *.suo
 *.xcodeproj
 *.xcworkspace
-*.uasset
 
 Source/InventorySystem/InventorySystemGameMode.h
 Source/InventorySystem/InventorySystemGameMode.cpp
@@ -24,3 +22,10 @@ Source/InventorySystem/InventorySystemCharacter.cpp
 Source/InventorySystem/InventorySystem.Build.cs
 Source/InventorySystemEditor.Target.cs
 Source/InventorySystem.Target.cs
+
+Content/Characters
+Content/__ExternalObjects__/ThirdPerson/Maps/ThirdPersonMap
+Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap
+Content/ThirdPerson
+Content/StarterContent
+Content/LevelPrototyping

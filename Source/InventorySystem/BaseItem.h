@@ -7,7 +7,7 @@
 #include "ItemInfo.h"
 #include "BaseItem.generated.h"
 
-UCLASS(BlueprintType)
+UCLASS(BlueprintType, Blueprintable)
 class INVENTORYSYSTEM_API UBaseItem : public UObject
 {
 	GENERATED_BODY()
