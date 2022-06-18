@@ -12,6 +12,16 @@ enum class QualityEnum : uint8
 	LEGENDARY = 4	UMETA(DisplayName - "Legendary")
 };
 
+UENUM(BlueprintType)
+enum class TypeEnum : uint8
+{
+	CONSUMABLE = 0	UMETA(DisplayName - "Consumable"),
+	ARMOR = 1		UMETA(DisplayName - "Armor"),
+	WEAPON = 2		UMETA(DisplayName - "Weapon"),
+	QUEST = 3		UMETA(DisplayName - "Quest"),
+	JUNK = 4		UMETA(DisplayName - "Junk")
+};
+
 USTRUCT(BlueprintType)
 struct INVENTORYSYSTEM_API FItemInfo
 {
@@ -33,7 +43,7 @@ struct INVENTORYSYSTEM_API FItemInfo
 	QualityEnum Quality;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	int Type;
+	TypeEnum Type;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bIsUsable;
