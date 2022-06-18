@@ -4,7 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "BaseItem.h"
+#include "ItemInfo.h"
 #include "InventoryComponent.generated.h"
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
@@ -26,14 +26,19 @@ public:
 
 	// Properties
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+	int UsedSlots;
+
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	int InventorySlots;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	TArray<FBaseItem> Items;
+	TArray<FItemInfo> Items;
 		
+	// Functions
+
 	UFUNCTION(BlueprintCallable)
-	bool AddItem(FBaseItem newItem);
+	bool AddItem(FItemInfo newItem);
 
 	UFUNCTION(BlueprintCallable)
 	bool HasSpace();
